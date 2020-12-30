@@ -1,0 +1,46 @@
+body {
+  background-color: #f3f6f8;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.logo {
+  width: 15%;
+  height: 5%;
+  margin: -25px;
+}
+
+nav {
+  background-color: #018060; 
+  height: 100px;
+  color: white;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.container {
+  margin: 100px 500px;
+}
+
+input[type=text] {
+  width: 150px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+width: 100%;
+}
+
+.card {
+  margin: 10px 10px;
+  padding: 5px 10px; 
+  box-shadow: 1px 1px 1px 1px;
+}
+
+h1 {
+  text-align: center;
+}
