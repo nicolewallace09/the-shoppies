@@ -44,3 +44,9 @@ width: 100%;
 h1 {
   text-align: center;
 }
+
+.movie-card > .card {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
