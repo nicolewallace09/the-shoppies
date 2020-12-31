@@ -1,21 +1,17 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect } from 'react';
 import Nav from "./components/Nav.js";
 import Search from "./components/Search.js";
 import MovieList from "./components/MovieList.js";
-
-
+import addNomination from './components/AddNom.js';
 
 function App() {
   const [movies, setMovies] = useState([]);
-
-  // new state to hold favorites -- adding ser clicks to this array 
-  const [favorites, setFavorites] = useState([]); 
-
+  const [nominations, setNominations] = useState([]); 
   const [searchValue, setSearchValue] = useState('');
 
-  // calling API -- searchValue as a parameter 
-  const getMovieRequest = async (searchValue) => {
+  const getMovie = async (searchValue) => {
     const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=50241c2`; 
     
     const response = await fetch(url); 
@@ -26,69 +22,87 @@ function App() {
     }
   };
 
-  // passes new searchValue to our getMovieRequest
+  // passes new searchValue 
   useEffect(() => {
-    getMovieRequest(searchValue); 
+    getMovie(searchValue); 
   }, [searchValue]); 
 
   // retrieving favorites from localStorage when app loads and setting to state 
   useEffect(() => {
-    const movieFavorites = JSON.parse(
-      localStorage.getItem('react-movie-app-favorites')
+    const movieNominations = JSON.parse(
+      localStorage.getItem('nominations')
     ); 
-    setFavorites(movieFavorites); 
+
+    if (movieNominations) {
+      setNominations(movieNominations); 
+    }
   }, []); 
 
   // saving to localStorage to remain when page loads 
   const saveToLocalStorage = (items) => {
-    localStorage.setItem('react-movie-app-favorites', JSON.stringify(items));
+    localStorage.setItem('nominations', JSON.stringify(items));
   };
 
   // accepts a movie, takes in the current favorites array, copies it, and adds the new movie and saves back into state 
-  const addFavoriteMovie = (movie) => {
-    const newFavoriteList = [...favorites, movie]; 
-    setFavorites(newFavoriteList);
-    saveToLocalStorage(newFavoriteList); 
+  const addNominatedMovie = (movie) => {
+    const newNominatedList = [...nominations, movie]; 
+    setNominations(newNominatedList);
+    saveToLocalStorage(newNominatedList); 
   };
 
   // remove a given movie from favorite state by filtering ID returning new favorites array
-  const removeFavoriteMovie = (movie) => {
-    const newFavoriteList = favorites.filter(
-      (favorite) => favorite.id !== movie.id
-    ); 
-    setFavorites(newFavoriteList); 
-    saveToLocalStorage(newFavoriteList); 
-  };
+  // const removeFavoriteMovie = (movie) => {
+  //   const newFavoriteList = favorites.filter(
+  //     (favorite) => favorite.id !== movie.IMDBid
+  //   ); 
+  //   setFavorites(newFavoriteList); 
+  //   saveToLocalStorage(newFavoriteList); 
+  // };
 
   return (
     <>
     <Nav></Nav>
     
-     <div class="container">
-      <div class="row">
-        <div class="col-lg-8">
+     <div className="container">
+        <div className="Title">
           <h1>Welcome to The Shoppies!</h1>
         </div>
-
-        <div class="card col-lg-8 bg-white search-card">
-          <p>Movie Title</p>
-          <Search searchValue={searchValue} setSearchValue={setSearchValue} />
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="card col-lg-4 bg-white movie-card">
-          <p>Results for "{searchValue}"</p>
-          <MovieList 
-          movies={movies}/>
+       
+        <div className="row">
+          <div className="card col-12 bg-white">
+            <p>Movie Title</p>
+            <Search searchValue={searchValue} setSearchValue={setSearchValue} />
+          </div>
         </div>
 
-        <div class="card col-lg-4 bg-white nom-card">
-          <p>Nominations</p>
+        <div className="row"> 
+          <div className="card col-8 bg-white">  
+            <div className="results-title">
+              <p>Results for "{searchValue}"</p>
+            </div>
+        
+            <div className="list-container"> 
+                <div className="d-flex mt-4 mb-4 bg-white">
+                  <MovieList 
+                  movies={movies}
+                  favoriteComponent={addNomination} 
+                  handleFavoritesClick={addNominatedMovie}/>
+                </div>
+            </div>
+          </div>
+       
+          <div className="card col-3bg-white nom-card">
+            <p>Nominations</p>
+            <center>Choose up to 5 nominations!</center>
+            {/* <MovieList 
+            movies={nominations} 
+            // handleFavoritesClick={removeFavoriteMovie}
+            // favoriteComponent={RemoveFavorites} 
+            />  */}
+          </div>
         </div>
-      </div>
-
     </div>
+
 
     </>
   );

@@ -6,25 +6,26 @@ const MovieList = (props) => {
 
 	return (
 		<>
-                {props.movies && props.movies.map((movie => (
+               
+                {props.movies && props.movies.map((movie, index) =>
                 <div className="movie-container">
                     
-                    <div className='image-container d-flex justify-content-start m-3'>
-                        <img src={movie.Poster} alt='movie'></img>
-                        {/* <div 
-                            // adding function from props and adding onClick property
-                            onClick={() => props.handleFavoritesClick(movie)}
-                            className='overlay d-flex align-items-center justify-content-center'>
-                            <FavoriteComponent/>
-                        </div> */}
+                    <div className='image-container'>
+                        <img src={movie.Poster} alt='movie' className="movie-poster"></img>
                     </div>
 
                     <div className="movie-info" key={movie.IMDBid}>
-                        <center><p className="movie-title font-weight-bold">{movie.Title} ({movie.Year})</p></center>
+                        <p className="movie-title font-weight-bold">{movie.Title} ({movie.Year})</p>
+                        <div 
+                        // adding function from props and adding onClick property
+                        onClick={() => props.handleFavoritesClick(movie)}
+                        className='overlay d-flex'>
+                        <FavoriteComponent/>
+                    </div>
                     </div>
 
                 </div>
-            )))}
+            )}
 		</>
 	);
 };
