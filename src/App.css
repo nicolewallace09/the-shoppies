@@ -1,6 +1,10 @@
 body {
-  background-color: #f3f6f8;
-  font-family: 'Open Sans', sans-serif;
+	background: #141414;
+	color: #ffffff;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 .logo {
@@ -9,7 +13,7 @@ body {
   margin: -25px;
 }
 
-nav {
+.navbar {
   background-color: #018060; 
   height: 100px;
   color: white;
@@ -23,16 +27,6 @@ nav {
 
 .container {
   margin: 100px;
-}
-
-input[type=text] {
-  width: 250px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
-}
-
-input[type=text]:focus {
-width: 90%;
 }
 
 .card {
@@ -64,3 +58,9 @@ h1 {
   width: 120%;
 }
 
+
+.form {
+	align-content: center;
+  margin: 0 auto; 
+  padding: 10px 0;
+}

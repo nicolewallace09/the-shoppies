@@ -1,6 +1,6 @@
 import React from 'react';
 
-const addNomination = () => {
+const AddNom = () => {
 	return (
 		<>
 			<button className='mr-2 btn btn-success'>Nominate</button>
@@ -8,4 +8,4 @@ const addNomination = () => {
 	);
 };
 
-export default addNomination;
+export default AddNom;

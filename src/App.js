@@ -1,10 +1,11 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'materialize-css/dist/css/materialize.min.css';
 import React, { useState, useEffect } from 'react';
 import Nav from "./components/Nav.js";
 import Search from "./components/Search.js";
 import MovieList from "./components/MovieList.js";
-import addNomination from './components/AddNom.js';
+import AddNom from './components/AddNom.js';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -53,7 +54,7 @@ function App() {
   // remove a given movie from favorite state by filtering ID returning new favorites array
   // const removeFavoriteMovie = (movie) => {
   //   const newFavoriteList = favorites.filter(
-  //     (favorite) => favorite.id !== movie.IMDBid
+  //     (favorite) => favorite.id !== movie.imdbD;
   //   ); 
   //   setFavorites(newFavoriteList); 
   //   saveToLocalStorage(newFavoriteList); 
@@ -85,19 +86,21 @@ function App() {
                 <div className="d-flex mt-4 mb-4 bg-white">
                   <MovieList 
                   movies={movies}
-                  favoriteComponent={addNomination} 
-                  handleFavoritesClick={addNominatedMovie}/>
+                  key={movies.imdbID}
+                  favoriteComponent={AddNom} 
+                  handleFavoritesClick={addNominatedMovie}
+                  />
                 </div>
             </div>
           </div>
        
-          <div className="card col-3bg-white nom-card">
+          <div className="card col-4 bg-white nom-card">
             <p>Nominations</p>
             <center>Choose up to 5 nominations!</center>
             {/* <MovieList 
             movies={nominations} 
-            // handleFavoritesClick={removeFavoriteMovie}
-            // favoriteComponent={RemoveFavorites} 
+            handleFavoritesClick={removeFavoriteMovie}
+            favoriteComponent={RemoveFavorites} 
             />  */}
           </div>
         </div>
