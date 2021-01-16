@@ -6,6 +6,7 @@ import Nav from "./components/Nav.js";
 import Search from "./components/Search.js";
 import MovieList from "./components/MovieList.js";
 import AddNom from './components/AddNom.js';
+import RemoveNom from "./components/RemoveNom.js"; 
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -46,19 +47,19 @@ function App() {
 
   // accepts a movie, takes in the current favorites array, copies it, and adds the new movie and saves back into state 
   const addNominatedMovie = (movie) => {
-    const newNominatedList = [...nominations, movie]; 
-    setNominations(newNominatedList);
-    saveToLocalStorage(newNominatedList); 
+    const newNominationList = [...nominations, movie]; 
+    setNominations(newNominationList);
+    saveToLocalStorage(newNominationList); 
   };
 
   // remove a given movie from favorite state by filtering ID returning new favorites array
-  // const removeFavoriteMovie = (movie) => {
-  //   const newFavoriteList = favorites.filter(
-  //     (favorite) => favorite.id !== movie.imdbD;
-  //   ); 
-  //   setFavorites(newFavoriteList); 
-  //   saveToLocalStorage(newFavoriteList); 
-  // };
+  const removeNominatedMovie = (movie) => {
+    const newNominationList = nominations.filter(
+      (nomination) => nomination.id !== movie.imdbD
+    ); 
+    setNominations(newNominationList); 
+    saveToLocalStorage(newNominationList); 
+  };
 
   return (
     <>
@@ -99,8 +100,8 @@ function App() {
             <center>Choose up to 5 nominations!</center>
             <MovieList 
             movies={nominations} 
-            favoriteComponent={AddNom} 
-            handleFavoritesClick={addNominatedMovie}
+            favoriteComponent={RemoveNom} 
+            handleFavoritesClick={removeNominatedMovie}
             /> 
           </div>
         </div>
