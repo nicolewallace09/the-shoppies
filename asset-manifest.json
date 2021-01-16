@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/nicolewallace09/the-shoppies/static/css/main.e258561f.chunk.css",
+    "main.js": "/nicolewallace09/the-shoppies/static/js/main.bd71cca2.chunk.js",
+    "main.js.map": "/nicolewallace09/the-shoppies/static/js/main.bd71cca2.chunk.js.map",
+    "runtime-main.js": "/nicolewallace09/the-shoppies/static/js/runtime-main.49090a09.js",
+    "runtime-main.js.map": "/nicolewallace09/the-shoppies/static/js/runtime-main.49090a09.js.map",
+    "static/css/2.622175fa.chunk.css": "/nicolewallace09/the-shoppies/static/css/2.622175fa.chunk.css",
+    "static/js/2.a97bbc81.chunk.js": "/nicolewallace09/the-shoppies/static/js/2.a97bbc81.chunk.js",
+    "static/js/2.a97bbc81.chunk.js.map": "/nicolewallace09/the-shoppies/static/js/2.a97bbc81.chunk.js.map",
+    "static/js/3.f5a302e0.chunk.js": "/nicolewallace09/the-shoppies/static/js/3.f5a302e0.chunk.js",
+    "static/js/3.f5a302e0.chunk.js.map": "/nicolewallace09/the-shoppies/static/js/3.f5a302e0.chunk.js.map",
+    "index.html": "/nicolewallace09/the-shoppies/index.html",
+    "static/css/2.622175fa.chunk.css.map": "/nicolewallace09/the-shoppies/static/css/2.622175fa.chunk.css.map",
+    "static/css/main.e258561f.chunk.css.map": "/nicolewallace09/the-shoppies/static/css/main.e258561f.chunk.css.map",
+    "static/js/2.a97bbc81.chunk.js.LICENSE.txt": "/nicolewallace09/the-shoppies/static/js/2.a97bbc81.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.49090a09.js",
+    "static/css/2.622175fa.chunk.css",
+    "static/js/2.a97bbc81.chunk.js",
+    "static/css/main.e258561f.chunk.css",
+    "static/js/main.bd71cca2.chunk.js"
+  ]
+}
