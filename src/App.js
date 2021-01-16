@@ -97,11 +97,11 @@ function App() {
           <div className="card col-4 bg-white nom-card">
             <p>Nominations</p>
             <center>Choose up to 5 nominations!</center>
-            {/* <MovieList 
+            <MovieList 
             movies={nominations} 
-            handleFavoritesClick={removeFavoriteMovie}
-            favoriteComponent={RemoveFavorites} 
-            />  */}
+            favoriteComponent={AddNom} 
+            handleFavoritesClick={addNominatedMovie}
+            /> 
           </div>
         </div>
     </div>
