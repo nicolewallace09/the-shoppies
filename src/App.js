@@ -103,7 +103,7 @@ function App() {
             <center>Choose up to 5 nominations!</center>
             <NominationList 
             movies={nominations} 
-            key={movies.imdbID}
+            key={nominations.imdbID}
             favoriteComponent={RemoveNom} 
             handleFavoritesClick={removeNominatedMovie}
             /> 
