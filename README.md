@@ -2,8 +2,8 @@
 
 ![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
 
-## Description 
-This is an application using React as the framework and allows the user to search movies they want to watch from the movieDB API. Users will be able to save their favorites on a list to view later on their Watch List. Their Watch List will be saved after reloading because it is saved in the local storage. 
+## Description
+Welcome to The Shoppies: Movie awards for entrepreneurs! This application was build to help Shopify manager their movie nominations. This application allows users to search for movies using the OMBD api and allow users to save the movies they want to nominate. The application is built using React, Javascript, HTML, and CSS.
 
 ## Table of Contents
 * [Installation](#installation)
@@ -18,7 +18,7 @@ No installation, this application is to be used on the browser. If wanting to wo
 
 ## Usage 
 This application will allow users to add or remove movies to their Nominations List.<br>
-<img scr="public/images/screenshot.png">
+<img src="public/images/screenshot.png">
 
 
 ## License 
