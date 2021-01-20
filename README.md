@@ -17,11 +17,9 @@ This is an application using React as the framework and allows the user to searc
 No installation, this application is to be used on the browser. If wanting to work on contents of the application, user will need to clone the repo and install dependencies. 
 
 ## Usage 
-This application will allow users to add or remove movies to their Watch List.<br>
-<!-- <!-- Please view deployed application on [Heroku](https://nw-shopshop.herokuapp.com//)<br>-- -->
-<img src='public/images/search.png'><br>
-Work in Progress<br>
-<img src='public/images/watchlist.png'>
+This application will allow users to add or remove movies to their Nominations List.<br>
+<img scr="public/images/screenshot.png">
+
 
 ## License 
 This project is license under MIT
