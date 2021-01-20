@@ -11,13 +11,13 @@ const MovieList = (props) => {
                 { props.movies.map((movie,index) => { 
                 if (movie) {
                     return (
-                        <div className="movie-container">
+                        <div className="movie-container" key={movie.imdbID}>
                             
                             <div className='image-container'>
                                 <img src={movie.Poster} alt='movie' className="movie-poster"></img>
                             </div>
 
-                            <div className="movie-info" key={movie.imdbID}>
+                            <div className="movie-info">
                                 <p className="movie-title font-weight-bold">{movie.Title} ({movie.Year})</p>
                                 <div 
                                 // adding function from props and adding onClick property
