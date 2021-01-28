@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/nicolewallace09/the-shoppies/static/css/main.92757ff3.chunk.css",
-    "main.js": "/nicolewallace09/the-shoppies/static/js/main.b7d0e873.chunk.js",
-    "main.js.map": "/nicolewallace09/the-shoppies/static/js/main.b7d0e873.chunk.js.map",
+    "main.js": "/nicolewallace09/the-shoppies/static/js/main.ae7767ab.chunk.js",
+    "main.js.map": "/nicolewallace09/the-shoppies/static/js/main.ae7767ab.chunk.js.map",
     "runtime-main.js": "/nicolewallace09/the-shoppies/static/js/runtime-main.88707a67.js",
     "runtime-main.js.map": "/nicolewallace09/the-shoppies/static/js/runtime-main.88707a67.js.map",
     "static/css/2.622175fa.chunk.css": "/nicolewallace09/the-shoppies/static/css/2.622175fa.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.622175fa.chunk.css",
     "static/js/2.cfda5f0f.chunk.js",
     "static/css/main.92757ff3.chunk.css",
-    "static/js/main.b7d0e873.chunk.js"
+    "static/js/main.ae7767ab.chunk.js"
   ]
 }
