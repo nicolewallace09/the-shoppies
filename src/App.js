@@ -9,7 +9,7 @@ function App() {
       <Router>
       <>
         <Switch>
-          <Route exact path='/the-shoppies' component={Homepage} />
+          <Route exact path='/the-shoppies/' component={Homepage} />
         </Switch>
       </>
     </Router>

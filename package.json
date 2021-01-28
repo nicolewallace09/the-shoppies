@@ -2,7 +2,7 @@
   "name": "the-shoppies",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/nicolewallace09/the-shoppies/",
+  "homepage": "https://nicolewallace09.github.io/the-shoppies/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.2",
