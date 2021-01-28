@@ -30,22 +30,22 @@ body {
 }
 
 .card {
-  margin: 10px 10px;
-  padding: 1px; 
   box-shadow: 1px 1px 1px 1px;
 }
 
-h1 {
+.Title {
   text-align: center;
+  font-size: 3rem;
+  margin: 20px;  
 }
 
 .row .list-container {
-    overflow-x: auto;
-    flex-wrap: nowrap;
+  overflow-x: auto;
+  flex-wrap: nowrap;
 }
 
 .movie-container {
-	padding: 2rem 4rem 0.5rem 4rem; 
+	padding: 2rem 5rem 0.5rem 5rem; 
 	/* border-radius: 50px; */
 	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
 	margin-bottom: 1rem;
@@ -54,10 +54,18 @@ h1 {
   margin-left: 1rem;
 }
 
-.movie-poster {
-  width: 120%;
+.movie-info {
+  justify-content: start;
 }
 
+.movie-card-title {
+  padding: -0.5rem; 
+}
+
+.movie-poster {
+  height: 12rem;
+  width: 8rem;
+}
 
 .form {
 	align-content: center;
@@ -67,4 +75,15 @@ h1 {
 
 .remove-btn {
   color: #ff6f00; 
+}
+
+.nom-card {
+  overflow-y: auto;
+  height: 412px; 
+}
+
+.result-title, .nom-title, .movie-title, .search-title {
+  color: #018060; 
+  font-weight: bold;
+  font-size: 1.2rem; 
 }

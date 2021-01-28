@@ -13,13 +13,13 @@ const NominationList = (props) => {
                         <div className="movie-container" key={movie.imdbID}>
 
                             <div className="movie-info">
-                                <p className="movie-title font-weight-bold">{movie.Title} ({movie.Year})</p>
+                                <p className="movie-card-title">{movie.Title} ({movie.Year})</p>
                                 <div 
                                 // adding function from props and adding onClick property
                                 onClick={() => props.handleFavoritesClick(movie)}
                                 className='overlay d-flex'>
                                 <FavoriteComponent/>
-                            </div>
+                                </div>
                             </div>
 
                         </div>

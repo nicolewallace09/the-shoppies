@@ -5,12 +5,9 @@ const MovieList = (props) => {
     const FavoriteComponent = props.favoriteComponent;
 
 	return (
-		<>
-               
-                {/* {props.movies && props.movies.map((movie, index) => */}
-                { props.movies.map((movie,index) => { 
-                if (movie) {
-                    return (
+		<>   
+               {props.movies && props.movies.map((movie => (
+           
                         <div className="movie-container" key={movie.imdbID}>
                             
                             <div className='image-container'>
@@ -18,7 +15,7 @@ const MovieList = (props) => {
                             </div>
 
                             <div className="movie-info">
-                                <p className="movie-title font-weight-bold">{movie.Title} ({movie.Year})</p>
+                                <p className="movie-card-title">{movie.Title} ({movie.Year})</p>
                                 <div 
                                 // adding function from props and adding onClick property
                                 onClick={() => props.handleFavoritesClick(movie)}
@@ -28,8 +25,7 @@ const MovieList = (props) => {
                             </div>
 
                         </div>
-                        )} return null
-                })}
+               )))}
 		</>
 	);
 };
