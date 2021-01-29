@@ -1,5 +1,5 @@
 body {
-  background: #ffffff;
+  background: #faebd7;
 	color: #141414;;
 }
 
@@ -26,7 +26,8 @@ body {
 }
 
 .container {
-  margin: 100px;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 .card {
@@ -87,3 +88,4 @@ body {
   font-weight: bold;
   font-size: 1.2rem; 
 }
+
