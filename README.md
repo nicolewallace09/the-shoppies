@@ -18,6 +18,7 @@ No installation, this application is to be used on the browser. If wanting to wo
 
 ## Usage 
 This application will allow users to add or remove movies to their Nominations List.<br>
+Please view deployed link on [GitHub Pages](https://nicolewallace09.github.io/the-shoppies/)<br>
 <img src="public/images/screenshot.png">
 
 
