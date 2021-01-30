@@ -68,7 +68,8 @@ function Homepage() {
       
        <div className="container">
           <div className="Title">
-            Welcome to The Shoppies!
+            Welcome to The Shoppies!<img src="https://img.icons8.com/cotton/64/000000/the-oscars--v1.png" alt="award-icon"/><br></br>
+            <span className="subtitle">Movie awards for entrepreneurs</span>
           </div>
          
           <Row>
@@ -103,7 +104,8 @@ function Homepage() {
          
             <Col xl={3} xs={12} > 
               <Card className="nom-card">
-                <p className="nom-title">Your Nominations List</p>
+                <p className="nom-title">Your Nominations List</p><br></br>
+                <p>Add to this list by pressing the nominate button under a movie</p>
                 <NominationList 
                 movies={nominations} 
                 key={nominations.imdbID}

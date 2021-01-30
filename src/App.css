@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
 body {
   background: #faebd7;
-	color: #141414;;
+  color: #141414;
+  font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 * {
@@ -38,6 +41,11 @@ body {
   text-align: center;
   font-size: 3rem;
   margin: 20px;  
+  font-family: 'Limelight', cursive;
+}
+
+.subtitle {
+  font-size: 1.5rem;
 }
 
 .row .list-container {
@@ -87,5 +95,6 @@ body {
   color: #018060; 
   font-weight: bold;
   font-size: 1.2rem; 
+  font-family: 'Limelight', cursive;;
 }
 
