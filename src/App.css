@@ -76,8 +76,8 @@ body {
   width: 8rem;
 }
 
-.form {
-	align-content: center;
+.form-control {
+  align-content: center;
   margin: 0 auto; 
   padding: 10px 0;
 }
